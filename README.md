@@ -60,6 +60,7 @@ sin escribirla (se desactivan con `ACCESOS_RAPIDOS=false`).
 | `npm run setup` | Aplica las migraciones y carga los datos iniciales |
 | `npm run db:seed` | **Borra** la base y vuelve a cargar los datos iniciales (sólo desarrollo) |
 | `npm run db:studio` | Abre Prisma Studio para mirar las tablas |
+| `npm run db:exportar` | Exporta la base completa a `base-de-datos/sigta.sql` |
 | `npm test` | Pruebas de la API (contra la base `sigta_test`) |
 | `npm run build` y luego `npm start` | Versión de producción |
 
@@ -74,6 +75,12 @@ sin escribirla (se desactivan con `ACCESOS_RAPIDOS=false`).
 | `CORS_ORIGENES` | Dominios del Front que pueden llamar a la API, separados por coma (por ejemplo `https://sigta-front.vercel.app`) |
 | `ACCESOS_RAPIDOS` | `true` (por defecto) muestra en el ingreso los botones para entrar con cualquier usuario |
 | `TZ` | `America/Argentina/Cordoba` |
+
+## Base de datos lista para importar
+
+`base-de-datos/sigta.sql` tiene la base completa (tablas, reglas, triggers y datos iniciales) para importar
+en Supabase, Neon o cualquier PostgreSQL. Los pasos están en [`base-de-datos/LEEME.md`](base-de-datos/LEEME.md).
+Se vuelve a generar con `npm run db:exportar`.
 
 ## Publicarla en internet (Vercel + Neon)
 

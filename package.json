@@ -23,7 +23,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "db:seed:si-vacia": "node --env-file-if-exists=.env dist/seed/cli.js --si-vacia"
+    "db:seed:si-vacia": "node --env-file-if-exists=.env dist/seed/cli.js --si-vacia",
+    "db:exportar": "bash scripts/exportar-base.sh"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
